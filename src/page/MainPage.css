@@ -1,0 +1,31 @@
+.book-item-info-container {
+    backdrop-filter: blur(3px);
+}
+
+.book-item-tag:hover {
+    cursor: pointer;
+    background-color: #777;
+    color: #fff;
+}
+
+.book-item-tag {
+    transition: all 0.2s ease-out;
+}
+
+.book-item-name:hover {
+    cursor: pointer;
+    color: #777;
+}
+
+.book-item-name {
+    transition: all 0.2s ease-out;
+}
+
+.book-item-cover:hover {
+    cursor: pointer;
+    filter: brightness(0.85);
+}
+
+.book-item-cover {
+    transition: all 0.2s ease-out;
+}

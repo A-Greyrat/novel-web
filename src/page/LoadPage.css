@@ -1,0 +1,87 @@
+/*SVG动画*/
+.loading-icon-process {
+    animation: loading-icon-process 2s linear infinite;
+}
+
+.loading-icon {
+    animation: loading-icon 2s linear infinite;
+}
+
+@keyframes loading-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes loading-icon-process {
+    0% {
+        stroke-dashoffset: 251px;
+    }
+    50% {
+        stroke-dashoffset: calc(251px * 0.2);
+        transform: rotate(135deg);
+    }
+    100% {
+        stroke-dashoffset: 251px;
+        transform: rotate(450deg);
+    }
+}
+
+.loading-text > p {
+    animation: loading-text 1s infinite ease-in-out;
+}
+
+.loading-text :nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading-text :nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-text :nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loading-text :nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.loading-text :nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.loading-text :nth-child(6) {
+    animation-delay: 1s;
+}
+
+@keyframes loading-text {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.6vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.loading-screen {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 2rem;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
