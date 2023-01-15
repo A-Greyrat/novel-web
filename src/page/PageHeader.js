@@ -76,13 +76,14 @@ export default function PageHeader() {
                     maxWidth: "30%", height: "100%", flex: "1 1 auto",
                 }}/>
 
-                <div style={{
+                <div className="page-header-search-root" style={{
                     width: "30%",
                     height: "100%",
                     maxWidth: "300px",
                     padding: "0 20px",
                     margin: "0",
                     flex: "0 0 auto",
+                    order: "0",
                     display: "flex",
                     alignItems: "center",
                     alignSelf: "center",
@@ -90,7 +91,6 @@ export default function PageHeader() {
                     <div className="page-header-search" style={{
                         width: "100%",
                         height: "70%",
-                        flex: "0 0 auto",
                         display: "flex",
                         alignItems: "center",
                         alignSelf: "center",

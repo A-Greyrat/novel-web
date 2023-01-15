@@ -1,4 +1,4 @@
-.book-item-info-container {
+.book-item-info-container-root {
     backdrop-filter: blur(3px);
 }
 
@@ -29,3 +29,12 @@
 .book-item-cover {
     transition: all 0.2s ease-out;
 }
+
+.book-item-info-container {
+    transition: opacity 0.3s ease-out;
+}
+
+.book-item-catalog-container {
+    transition: opacity 0.3s ease-out;
+}
+

@@ -29,3 +29,7 @@
 .page-header-search-icon :hover {
     cursor: pointer;
 }
+
+.page-header-search-root {
+    transition: all 0.2s ease-out;
+}

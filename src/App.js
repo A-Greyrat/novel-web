@@ -5,7 +5,7 @@ import {faGear, faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 import {Button, Modal, Slider} from "antd";
 import {HexColorPicker} from "react-colorful";
 import {Link, Route, Routes} from 'react-router-dom'
-import MainPage from "./page/MainPage";
+import MainPage from "./page/MainPage/MainPage";
 
 const defaultSetting = {
     fontSize: "20px",
