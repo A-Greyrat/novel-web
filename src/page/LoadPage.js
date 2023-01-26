@@ -1,7 +1,10 @@
 import "./LoadPage.css";
 
 export default function LoadPage(props) {
-    return (<div className="loading-screen" style={{display: props.isLoaded ? "none" : "flex",}}>
+    return (<div className="loading-screen" style={{
+        display: props.isLoaded ? "none" : "flex",
+        userSelect: "none", WebkitUserSelect: "none", MozUserSelect: "none", msUserSelect: "none",
+    }}>
         <svg className="loading-icon" width="45" height="45" viewBox="-50 -50 100 100"
              xmlns="http://www.w3.org/2000/svg">
             <circle cx="0" cy="0" r="40" strokeWidth="5" fill="none" stroke="rgba(209, 211, 215, 0.5)"/>

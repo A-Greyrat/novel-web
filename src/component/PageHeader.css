@@ -1,0 +1,51 @@
+.page-header-item:hover {
+    background-color: #f5f5f5;
+}
+
+.page-header-item:active {
+    background-color: #e5e5e5;
+}
+
+.page-header-item {
+    transition: all 0.3s ease-out;
+}
+
+.page-header-search {
+    transition: all 0.3s ease-out;
+}
+
+.page-header-search > input {
+    transition: all 0.3s ease-out;
+}
+
+.page-header-search:focus-within {
+    filter: invert(0.05);
+    width: calc(15vw + 80px);
+}
+
+.page-header-search:hover {
+    filter: invert(0.05);
+    width: calc(15vw + 80px);
+}
+
+.page-header-search-icon :hover {
+    cursor: pointer;
+}
+
+.page-header-search {
+    transition: all 0.3s ease-out;
+    width: calc(15vw + 15px);
+}
+
+@media (prefers-color-scheme: dark) {
+    .page-header-root {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    .page-header-root {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+}
