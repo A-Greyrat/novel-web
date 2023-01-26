@@ -1,0 +1,15 @@
+.novel-reader-page-side-button-setting-icon:hover {
+    rotate: 190deg;
+}
+
+.novel-reader-page-side-button-setting-icon {
+    transition: all 0.5s;
+}
+
+.novel-reader-page-side-button {
+    transition: all 0.5s;
+}
+
+.novel-reader-page-side-button:hover {
+    transform: translateX(-10px);
+}

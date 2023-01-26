@@ -1,0 +1,113 @@
+.novel-chapter-page-button {
+    width: calc(0.5vw + 80px);
+    height: calc(0.5vw + 30px);
+    font-size: calc(0.1vw + 12px);
+    border-radius: 10px;
+    border: none;
+    background-color: dodgerblue;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    margin-right: 20px;
+    transition: all 0.2s;
+}
+
+
+.novel-chapter-page-button:hover {
+    background-color: cadetblue;
+}
+
+@media screen and (max-width: 800px) {
+    .novel-chapter-page-up-describe {
+        display: none;
+    }
+
+    .novel-chapter-page-down-describe {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .novel-chapter-page-up-describe {
+        display: -webkit-box;
+    }
+
+    .novel-chapter-page-down-describe {
+        display: none;
+    }
+}
+
+.novel-chapter-page-down-describe-content::before {
+    content: '“';
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    top: 10px;
+    left: -20px;
+}
+
+.novel-chapter-page-down-describe-content::after {
+    content: '”';
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+}
+
+.novel-chapter-page-catalog-item-sub-item-link :hover {
+    filter: invert(0.45);
+}
+
+.novel-chapter-page-catalog-item-sub-item-link {
+    transition: all 0.5s ease-out;
+}
+
+.novel-chapter-page-catalog-item-sub-item {
+    padding: 8px 0;
+    transition: all 0.2s;
+}
+
+.novel-chapter-page-catalog-item-sub-item:hover {
+    padding: 15px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .novel-chapter-page-info-container {
+        background-color: #252525;
+    }
+
+    .novel-chapter-page-down-describe {
+        background-color: #252525;
+    }
+
+    .novel-chapter-page-chapter-list {
+        background-color: #252525;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .novel-chapter-page-info-container {
+        background-color: rgba(233, 233, 233, 0.25);
+    }
+
+    .novel-chapter-page-down-describe {
+        background-color: rgba(233, 233, 233, 0.25);
+    }
+
+    .novel-chapter-page-chapter-list {
+        background-color: rgba(233, 233, 233, 0.25);
+    }
+}
+
+.novel-chapter-page-back-button {
+    cursor: pointer;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+}
+
+.novel-chapter-page-back-button:hover {
+    background-color: whitesmoke;
+    scale: 1.25;
+}
