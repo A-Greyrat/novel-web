@@ -1,3 +1,3 @@
 # novel-web
 
-nilou.xyz
+<https://nilou.xyz>
