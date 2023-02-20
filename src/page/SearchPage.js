@@ -1,14 +1,14 @@
 import {useParams} from "react-router-dom";
 import {useState} from "react";
 import BookItem from "../component/BookItem";
-import {ax} from "../global";
+import {ax, getToken} from "../global";
 import {useDispatch, useSelector} from "react-redux";
 import {setSearchResult} from "../redux/novelListsSlice";
 import LoadPage from "./LoadPage";
 import {message} from "antd";
 
 async function getSearchResult(keyword) {
-    return await ax.get("/api/novel/search?keyword=" + keyword)
+    return await ax.get("/api/novel/search?keyword=" + keyword + "&token=" + getToken())
         .then(response => response.data)
         .then(data => {
             if (data.code === 403) {

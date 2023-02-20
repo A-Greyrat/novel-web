@@ -3,7 +3,7 @@ import LoadPage from "./LoadPage";
 import './ReaderPage.css';
 import {Image, message, Modal, Slider} from "antd";
 import {HexColorPicker} from "react-colorful";
-import {ax, nullPic} from "../global";
+import {ax, getToken, nullPic} from "../global";
 import PageFooter from "../component/PageFooter";
 import {useDispatch, useSelector} from "react-redux";
 import {
@@ -109,7 +109,7 @@ function SideButton({content, onClick}) {
 }
 
 async function getChapterInfo({id, chapterListIndex, chapterListName, chapterIndex, chapterName}) {
-    const url = "/api/novel/detail?id=" + id + "&chapter=" + chapterListIndex + chapterListName + "&page=" + chapterIndex + chapterName;
+    const url = "/api/novel/detail?id=" + id + "&chapter=" + chapterListIndex + chapterListName + "&page=" + chapterIndex + chapterName + "&token=" + getToken();
     const res = await ax.get(url).catch((err) => {
         if (err.response.status === 400) {
             message.error("非法请求").then(() => {
@@ -136,7 +136,7 @@ async function getChapterInfo({id, chapterListIndex, chapterListName, chapterInd
     for (let i = 0; i < obj.text.length; i++) {
         if (obj.text[i].startsWith("!{ImageUrl}")) {
             const imageIndex = parseInt(obj.text[i].substring(11));
-            const url = "/api/novel/illustration?id=" + id + "&chapter=" + chapterListIndex + chapterListName + "&page=" + chapterIndex + chapterName + "&pid=" + imageIndex;
+            const url = "/api/novel/illustration?id=" + id + "&chapter=" + chapterListIndex + chapterListName + "&page=" + chapterIndex + chapterName + "&pid=" + imageIndex + "&token=" + getToken();
             await ax.get(url, {
                 responseType: "arraybuffer",
             }).then((res) => {

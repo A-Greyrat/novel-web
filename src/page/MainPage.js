@@ -1,7 +1,7 @@
 import "./MainPage.css";
 import BookItem from "../component/BookItem";
 import {Component} from "react";
-import {ax} from "../global";
+import {ax, getToken} from "../global";
 import LoadPage from "./LoadPage";
 import {message} from "antd";
 
@@ -17,7 +17,7 @@ export default class MainPage extends Component {
     }
 
     componentDidMount() {
-        ax.get("/api/novel/random?num=50").then(response => {
+        ax.get("/api/novel/random?num=50&token=" + getToken()).then(response => {
             return response.data;
         }).then(data => {
             if (data.code === 403) {
@@ -32,12 +32,13 @@ export default class MainPage extends Component {
             });
         }).catch(error => {
             if (error.response.status === 400) {
-                message.error("登录已过期，请重新登录").then(
-                    () => {
-                        document.cookie = "";
-                        window.location.href = "/login";
-                    }
-                );
+                console.log(error.response.data)
+                // message.error("登录已过期，请重新登录").then(
+                //     () => {
+                //         document.cookie = "";
+                //         window.location.href = "/login";
+                //     }
+                // );
             } else {
                 message.error("未知错误: " + error.response.data.error);
             }
